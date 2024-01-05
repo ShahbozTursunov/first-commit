@@ -1,0 +1,31 @@
+# Ignore files created by the OS or editors
+*.DS_Store
+*.pyc
+*~
+
+# Ignore the virtual environment directory
+venv/
+env/
+
+# Ignore local development settings
+*.env
+
+# Ignore database files
+*.sqlite3
+
+# Ignore static and media files (if using)
+/staticfiles/
+/media/
+
+# Ignore secret keys or sensitive information (e.g., .env files)
+.env
+
+# Ignore logs
+/logs/
+
+# Ignore migration files if you don't want to track them
+**/migrations/*.py
+**/migrations/*.pyc
+
+# Ignore compiled Python bytecode
+__pycache

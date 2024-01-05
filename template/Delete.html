@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O'chirish</title>
+    <style>
+        .div{
+            text-align: center;
+            margin-top: 300px;
+        }
+        button{
+            background-color: blue;
+            border-radius: 5px;
+            width: 50px;
+            height: 25px;
+            border: none;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="div">
+            <h2>Accauntingizni o'chirishni xohlaysizmi?</h2>
+            <form method="delete">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class = "submit_button"><a href="">Ok</a></button>
+            </form>
+            <p>Ogohlantirmaiz, agar accauntingini o'chirsangiz siz haqingizdagi barcha malumotlar o'chib ketishi mumkin.
+                <br> Shuning uchun qaytatdan o'ylab ko'ring.</p>
+        </div>
+    </div>
+</body>
+</html>

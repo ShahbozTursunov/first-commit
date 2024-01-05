@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User List</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            margin-left: 550px;
+        }
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>User List</h1>
+    <table border="1">
+        <tr>
+            <th>Phone</th>
+            <th>Name</th>
+            <th>Password</th>
+            <th>Familiya</th>
+            <th>Nick</th>
+            <th>Card</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.phone }}</td>
+            <td>{{ user.ism }}</td>
+            <td>{{ user.password }}</td>
+            <td>{{ user.familiya }}</td>
+            <td>{{ user.nick }}</td>
+            <td>{{ user.card }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="6">No users found</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

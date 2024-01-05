@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login qilish</title>
+    <style>
+        button{
+            background-color: blue;
+            border-radius: 5px;
+            width: 50px;
+            height: 25px;
+            border: none;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .div{
+            text-align: center;
+            border-style: groove;
+            border-radius: 5px;
+            height: 200px;
+            width: 400px;
+            margin-left: 550px;
+            margin-top: 150px;
+        }
+        h2{
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="div">
+            <h1>Logindan o'ting</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class = "submit_button"><a href="./all_done.html">Ok</a></button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
